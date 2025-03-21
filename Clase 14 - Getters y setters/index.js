@@ -18,17 +18,11 @@ function createStudent({
   };
 
   const public = {
-    // readName() {
-    //   return private._name;
-    // },
-    // changeName(newName) {
-    //   private._name = newName;
-    // },
     get name() {
       return private._name;
     },
     set name(newName) {
-      if (newName.length != 3) {
+      if (newName.length != 0) {
         private._name = newName;
       } else {
         console.warn('Debe tener al menos un caracter');
@@ -44,10 +38,6 @@ function createStudent({
       facebook,
     },
   };
-  // Object.defineProperty(public, 'readName', {
-  //   configurable: false,
-  //   writable: false,
-  // });
 
   return public;
 }

@@ -10,15 +10,15 @@ const obj1 = {
   },
 };
 
-export function isObject(subject) {
+function isObject(subject) {
   return typeof subject === 'object';
 }
 
-export function isArray(subject) {
+function isArray(subject) {
   return Array.isArray(subject);
 }
 
-export function deepCopy(subject) {
+function deepCopy(subject) {
   let copySubject;
   const subjectIsArray = isArray(subject);
   const subjectIsObject = isObject(subject);
